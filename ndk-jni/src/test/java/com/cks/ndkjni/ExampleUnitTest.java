@@ -1,4 +1,4 @@
-package com.cks.ndk_jni;
+package com.cks.ndkjni;
 
 import org.junit.Test;
 

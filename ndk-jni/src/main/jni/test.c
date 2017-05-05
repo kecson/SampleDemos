@@ -1,12 +1,8 @@
-//
-// Created by 56870 on 2016/3/14.
-//
-#include "com_avcon_ndk_MainActivity.h"
-#include <stdio.h>
-#include <stdlib.h>
+#include <jni.h>
 
-JNIEXPORT jstring JNICALL Java_com_avcon_ndk_MainActivity_getStringFromNative
-        (JNIEnv *evn, jobject jthiz) {
+JNIEXPORT jstring JNICALL
+
+Java_com_cks_ndkjni_MainActivity_helloWord(JNIEnv *evn, jobject jthiz) {
 #if defined(__arm__)
 #if defined(__ARM_ARCH_7A__)
     #if defined(__ARM_NEON__)
@@ -38,7 +34,7 @@ JNIEXPORT jstring JNICALL Java_com_avcon_ndk_MainActivity_getStringFromNative
  #else
     #define ABI "unknown"
 #endif
-    return (*evn)->NewStringUTF(evn, " from NDK Native String , ABI:" ABI);
+    return (*evn)->NewStringUTF(evn, " HelloWorld from NDK Native String , ABI:" ABI);
 }
 
 

@@ -1,1 +1,2 @@
-include ':cmake-jni', ':ndk-jni'
+include ':cmake-jni'
+include ':ndk-jni'
